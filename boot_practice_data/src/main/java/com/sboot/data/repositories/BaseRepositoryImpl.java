@@ -21,11 +21,11 @@ public class BaseRepositoryImpl<T, S extends Serializable> implements BaseReposi
     public List<T> batchSave(List<T> entities){
         int i = 0;
         List<T> savedEntities = new ArrayList<>();
-        for(T entity : entities){
+        for(T entity : entities) {
             entityManager.persist(entity);
             ++i;
             savedEntities.add(entity);
-            if(i % batchSize == 0){
+            if (i % batchSize == 0) {
                 entityManager.flush();
                 entityManager.clear();
             }

@@ -21,6 +21,15 @@
             <artifactId>boot_practice_service</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.sboot</groupId>
+            <artifactId>boot_practice_batch</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-batch</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

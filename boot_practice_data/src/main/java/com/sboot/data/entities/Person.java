@@ -1,19 +1,21 @@
 package com.sboot.data.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "people")
 public class Person {
 
     @Id
     private long id;
 
+    private int age;
+
     private String firstName;
 
     private String lastName;
+
+    private String email;
 
     private Integer jobId;
 
@@ -47,5 +49,21 @@ public class Person {
 
     public void setJobId(Integer jobId) {
         this.jobId = jobId;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

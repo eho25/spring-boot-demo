@@ -37,7 +37,6 @@ public class PersonService {
             p.setFirstName(NAME);
             p.setLastName(NAME);
             p.setJobId(i);
-            p.setId(i);
             batchSaveList.add(p);
         }
         for(; i < 200000; ++i){
@@ -45,7 +44,6 @@ public class PersonService {
             p.setFirstName(NAME);
             p.setLastName(NAME);
             p.setJobId(i);
-            p.setId(i);
             normalSaveList.add(p);
         }
         long startTimeBatch = System.currentTimeMillis();

@@ -33,7 +33,6 @@ public class PersonRepositoryTest {
         p.setFirstName(NAME);
         p.setLastName(NAME);
         p.setJobId(1);
-        p.setId(1);
         entityManager.persistAndFlush(p);
         List<Person> foundPeople = personRepo.findAll();
         assertTrue(foundPeople.size() > 0);
